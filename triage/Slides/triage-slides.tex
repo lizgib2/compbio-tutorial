@@ -1,0 +1,327 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[mathscr]{eucal}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{psfrag}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{appendixnumberbeamer}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+
+\include{psbox}
+
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage[textsize=small]{todonotes}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\essinf}{ess\,inf}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+\DeclareMathOperator*{\Tr}{Tr}
+
+\newcommand{\AB}[1]{\todo[color=NavyBlue,inline]{Amarjit: #1}}
+\newcommand{\EF}[1]{\todo[color=Orange,inline]{Eric: #1}}
+
+
+\usepackage[numbers]{natbib}
+
+
+\begin{document}
+
+
+
+
+
+\newcommand{\skp}{\vspace{\baselineskip}}
+\newcommand{\noi}{\noindent}
+\newcommand{\osc}{\mbox{osc}}
+\newcommand{\lfl}{\lfloor}
+\newcommand{\rfl}{\rfloor}
+\newcommand{\img}{\imath}
+\newcommand{\iy}{\infty}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\del}{\delta}
+\newcommand{\Rk}{\mathbb{R}^k}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\spa}{\vspace{.2in}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\I}{\mathbb{I}}
+%\newcommand{\P}{\mathbb{P}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\ti}{\tilde}
+
+\newcommand{\QQ}{\mathbb{Q}}
+
+\newcommand{\XX}{\mathbb{X}}
+\newcommand{\XXz}{\mathbb{X}^0}
+
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+\newcommand{\lf}{\lfloor}
+\newcommand{\rf}{\rfloor}
+\def\wh{\widehat}
+\newcommand{\defn}{\stackrel{def}{=}}
+\newcommand{\txb}{\tau^{\epsilon,x}_{B^c}}
+\newcommand{\tyb}{\tau^{\epsilon,y}_{B^c}}
+\newcommand{\tilxb}{\tilde{\tau}^\eps_1}
+\newcommand{\pxeps}{\mathbb{P}_x^{\eps}}
+\newcommand{\non}{\nonumber}
+\newcommand{\dist}{\mbox{dist}}
+
+
+\newcommand{\Om}{\mathnormal{\Omega}}
+\newcommand{\om}{\omega}
+\newcommand{\vph}{\varphi}
+\newcommand{\Del}{\mathnormal{\Delta}}
+\newcommand{\Gam}{\mathnormal{\Gamma}}
+\newcommand{\Sig}{\mathnormal{\Sigma}}
+
+\newcommand{\tilyb}{\tilde{\tau}^\eps_2}
+\newcommand{\beq}{\begin{eqnarray*}}
+\newcommand{\eeq}{\end{eqnarray*}}
+\newcommand{\beqn}{\begin{eqnarray}}
+\newcommand{\eeqn}{\end{eqnarray}}
+\newcommand{\ink}{\rule{.5\baselineskip}{.55\baselineskip}}
+
+\newcommand{\bt}{\begin{theorem}}
+\newcommand{\et}{\end{theorem}}
+\newcommand{\deps}{\Del_{\eps}}
+\newcommand{\dbl}{\mathbf{d}_{\tiny{\mbox{BL}}}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ac}{\mbox{AC}}
+%\newcommand{\dist}{\mbox{dist}}
+\newcommand{\BB}{\mathbb{B}}
+\newcommand{\VV}{\mathbb{V}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\SSS}{\mathbb{S}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\MM}{\mathbb{M}}
+
+
+\newcommand{\clg}{\mathcal{G}}
+\newcommand{\clb}{\mathcal{B}}
+\newcommand{\cls}{\mathcal{S}}
+\newcommand{\clc}{\mathcal{C}}
+\newcommand{\clj}{\mathcal{J}}
+\newcommand{\clm}{\mathcal{M}}
+\newcommand{\clx}{\mathcal{X}}
+\newcommand{\cld}{\mathcal{D}}
+\newcommand{\cle}{\mathcal{E}}
+\newcommand{\clv}{\mathcal{V}}
+\newcommand{\clu}{\mathcal{U}}
+\newcommand{\clr}{\mathcal{R}}
+\newcommand{\clt}{\mathcal{T}}
+\newcommand{\cll}{\mathcal{L}}
+\newcommand{\clz}{\mathcal{Z}}
+\newcommand{\clq}{\mathcal{Q}}
+
+\newcommand{\cli}{\mathcal{I}}
+\newcommand{\clp}{\mathcal{P}}
+\newcommand{\cla}{\mathcal{A}}
+\newcommand{\clf}{\mathcal{F}}
+\newcommand{\clh}{\mathcal{H}}
+\newcommand{\clo}{\mathcal{O}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\bfx}{{\boldsymbol{x}}}
+\newcommand{\bfa}{{\boldsymbol{a}}}
+\newcommand{\bfh}{{\boldsymbol{h}}}
+\newcommand{\bfs}{{\boldsymbol{s}}}
+\newcommand{\bfm}{{\boldsymbol{m}}}
+\newcommand{\bff}{{\boldsymbol{f}}}
+\newcommand{\bfb}{{\boldsymbol{b}}}
+\newcommand{\bfw}{{\boldsymbol{w}}}
+\newcommand{\bfz}{{\boldsymbol{z}}}
+\newcommand{\bfu}{{\boldsymbol{u}}}
+\newcommand{\bfell}{{\boldsymbol{\ell}}}
+\newcommand{\bfn}{{\boldsymbol{n}}}
+\newcommand{\bfd}{{\boldsymbol{d}}}
+\newcommand{\bfbeta}{{\boldsymbol{\beta}}}
+\newcommand{\bfzeta}{{\boldsymbol{\zeta}}}
+\newcommand{\bfnu}{{\boldsymbol{\nu}}}
+\newcommand{\bfvarphi}{{\boldsymbol{\varphi}}}
+
+\newcommand{\curvz}{{\bf \mathpzc{z}}}
+\newcommand{\curvx}{{\bf \mathpzc{x}}}
+\newcommand{\curvi}{{\bf \mathpzc{i}}}
+\newcommand{\curvs}{{\bf \mathpzc{s}}}
+\newcommand{\blip}{\mathbb{B}_1}
+
+\newcommand{\BM}{\mbox{BM}}
+
+\newcommand{\tac}{\mbox{\scriptsize{AC}}}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Triage]{Using Computer Simulations to Improve Triage in a Mass-Casualty Event} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+% \author[Eric Friedlander]{Eric Friedlander} % Your name
+% \institute[UNC-CH] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+% {
+% University of North Carolina at Chapel Hill\\ % Your institution for the title page
+% Department of Statistics and Operations Research
+% }
+\date{February 24th, 2019} % Date, can be changed to a custom date
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%
+% \section{Introduction}
+% \frame{\tableofcontents [
+%         currentsection,
+%         currentsubsection,
+%         subsectionstyle=show/shaded/hide
+%     ]}
+
+\begin{frame}
+\frametitle{Mass-Casualty Event}
+\includegraphics[width = .49\textwidth, height = .3\textwidth]{earthquake}
+\includegraphics[width = .49\textwidth, height = .3\textwidth]{busaccident}
+\includegraphics[width = .49\textwidth, height = .3\textwidth]{tsunami}
+\includegraphics[width = .49\textwidth, height = .3\textwidth]{bombing}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Oh no! The red line has derailed!}
+  \includegraphics[width=1\textwidth]{train_derailed}
+\end{frame}
+
+\begin{frame}
+  \frametitle{At the site of the crash}
+  \begin{minipage}[c]{.45\textwidth}
+    \includegraphics[width=1\textwidth]{EMSTriage}
+  \end{minipage}
+  \begin{minipage}[c]{.45\textwidth}
+    \begin{itemize}
+      \item \textbf{First-responders:} Triage patients based on injury severity
+      \item \textcolor{red}{RED:} Patients in worst shape
+      \item \textcolor{yellow}{YELLOW:} Patients whose care can be delayed
+      \item \textcolor{green}{GREEN:} Patients with minor injuries
+    \end{itemize}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Simple Triage and Rapid Treatment (START)}
+  \centering
+  \includegraphics[width=.5\textwidth]{StartAdultTriageAlgorithm}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Meanwhile, you must prepare the UChicago Trauma Unit}
+  \includegraphics[width=1\textwidth]{uchicago_trama}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Houston, we have a problem...}
+  \begin{itemize}
+    \item \textbf{Problem:} Not enough resources for all injured
+    \item Expect around 30 patients but we only have 10 beds!\pause
+    \item Any patients who cannot be seen here will need to be transported to the next closest unit which will take an additional 50 minutes!\pause
+    \item Who should be admit and who should we turn away?
+  \end{itemize}
+\end{frame}
+
+\end{document}
