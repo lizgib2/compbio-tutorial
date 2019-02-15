@@ -1,0 +1,13 @@
+Subject No,HR,MAP,SV,FRC,Data_type
+1,80,95,73,2.9,Preflight_standing
+2,74,86,94,2.7,Preflight_standing
+3,65,90,82,2.7,Preflight_standing
+4,74,87,91,3.3,Preflight_standing
+5,78,90,73,3.2,Preflight_standing
+6,63,81,85,2.0,Preflight_standing
+1,66,91,117,3.3,in_flight
+2,52,73,154,2.8,in_flight
+3,58,78,135,2.8,in_flight
+4,57,88,124,3.1,in_flight
+5,54,81,142,3.4,in_flight
+6,59,80,101,2.1,in_flight
