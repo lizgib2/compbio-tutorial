@@ -9,6 +9,7 @@ def arr_int(time, num_pats, peak_time):
     # num_pats determines the magnitude of the event (i.e. the number of patients)
     # peak_time controls when the peak arrival time will be
     t = time/60
+    peak_time /= 60
     out = num_pats / 60 * (t)**(peak_time-1)*np.exp(-t)/(gamma(peak_time))
     return out
 
@@ -25,8 +26,8 @@ def generate_times_opt(rate_function, max_t, delta):
 def sim_walkthrough():
     numPatients = 30  # Total number of patients on average
     ratio = 1/3  # Ratio of IMMEDIATE patients to DELAYED patients
-    peakI = 4.5  # This parameter controls when the peak of arrivals is for IMMEDIATE patients
-    peakD = 2.5  # This parameter controls when the peak of arrivals is for DELAYED patients
+    peakI = 270  # This parameter controls when the peak of arrivals is for IMMEDIATE patients
+    peakD = 150  # This parameter controls when the peak of arrivals is for DELAYED patients
 
     # Probabilities of surviving the trip to another hospital
     probI = .4
@@ -67,7 +68,7 @@ def plot_arr_int(num_pat, peak):
     plt.show()
 
 
-def plot_arr_ints(numReps, numPatients, ratio, peakI, peakD):
+def plot_arr_ints(numPatients, ratio, peakI, peakD):
     # Compute parameters for functions
     cI = numPatients / (1+ratio)
     cD = numPatients - cI
