@@ -25,7 +25,7 @@ def generate_times_opt(rate_function, max_t, delta):
 
 def sim_walkthrough():
     numPatients = 30  # Total number of patients on average
-    ratio = 1/3  # Ratio of IMMEDIATE patients to DELAYED patients
+    odds = 1/3  # Ratio of IMMEDIATE patients to DELAYED patients
     peakI = 270  # This parameter controls when the peak of arrivals is for IMMEDIATE patients
     peakD = 150  # This parameter controls when the peak of arrivals is for DELAYED patients
 
@@ -34,7 +34,8 @@ def sim_walkthrough():
     probD = .8
 
     # Compute parameters for functions"
-    cI = numPatients / (1+ratio)
+    ratio = odds/(1+odds)
+    cI = numPatients * odds
     cD = numPatients - cI
 
     tp = np.linspace(0, 720, num=1000)
@@ -42,10 +43,10 @@ def sim_walkthrough():
     def yI(t): return arr_int(t, cI, peakI)
 
     def yD(t): return arr_int(t, cD, peakD)
-    red_ind = np.random.binomial(1, ratio/(1+ratio))
+    red_ind = np.random.binomial(1, ratio)
     ppI_times = generate_times_opt(yI, 720, .1)
     ppD_times = generate_times_opt(yD, 720, .1)
-    imm_ind = np.random.binomial(1, ratio/(1+ratio))
+    imm_ind = np.random.binomial(1, ratio)
     if imm_ind == 1:
         time = np.random.choice(ppI_times)/720 * 120
         col = 'ORANGE'
@@ -68,9 +69,10 @@ def plot_arr_int(num_pat, peak):
     plt.show()
 
 
-def plot_arr_ints(numPatients, ratio, peakI, peakD):
+def plot_arr_ints(numPatients, odds, peakI, peakD):
     # Compute parameters for functions
-    cI = numPatients / (1+ratio)
+    ratio = odds/(1+odds)
+    cI = numPatients * odds
     cD = numPatients - cI
 
     # Lets plot the arrival rate functions for both classes of patients
@@ -87,9 +89,10 @@ def plot_arr_ints(numPatients, ratio, peakI, peakD):
     plt.show()
 
 
-def plot_arrivals(numPatients, ratio, peakI, peakD):
+def plot_arrivals(numPatients, odds, peakI, peakD):
     tp = np.linspace(0, 720, num=1000)
-    cI = numPatients / (1+ratio)
+    ratio = odds/(1+odds)
+    cI = numPatients * odds
     cD = numPatients - cI
 
     def yI(t): return arr_int(t, cI, peakI)
@@ -113,10 +116,11 @@ def plot_arrivals(numPatients, ratio, peakI, peakD):
     plt.show()
 
 
-def simulate(reps, numBeds, numPatients, ratio, peakI, peakD, probI, probD):
+def simulate(reps, numBeds, numPatients, odds, peakI, peakD, probI, probD):
 
     # Compute parameters for functions"
-    cI = numPatients / (1+ratio)
+    ratio = odds/(1+odds)
+    cI = numPatients * odds
     cD = numPatients - cI
     tp = np.linspace(0, 720, num=1000)
 
