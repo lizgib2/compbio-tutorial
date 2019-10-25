@@ -249,7 +249,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Triage]{Using Computer Simulations to Improve Triage in a Mass-Casualty Event} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Triage]{Simulating a Mass-Casualty Event} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 % \author[Eric Friedlander]{Eric Friedlander} % Your name
 % \institute[UNC-CH] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -257,7 +257,7 @@
 % University of North Carolina at Chapel Hill\\ % Your institution for the title page
 % Department of Statistics and Operations Research
 % }
-\date{February 24th, 2019} % Date, can be changed to a custom date
+\date{May 21st, 2019} % Date, can be changed to a custom date
 
 \begin{frame}
 \titlepage % Print the title page as the first slide
@@ -275,11 +275,6 @@
 %         subsectionstyle=show/shaded/hide
 %     ]}
 
-\begin{frame}
-  \frametitle{Based On Actual Research!}
-  \centering
-  \includegraphics[scale = .3]{paper}
-\end{frame}
 
 \begin{frame}
 \frametitle{Mass-Casualty Event}
@@ -289,15 +284,8 @@
 \includegraphics[width = .49\textwidth, height = .3\textwidth]{bombing}
 \end{frame}
 
-
-
 \begin{frame}
-  \frametitle{Oh no! The red line has derailed!}
-  \includegraphics[width=1\textwidth]{train_derailed}
-\end{frame}
-
-\begin{frame}
-  \frametitle{At the site of the crash}
+  \frametitle{Triage}
   \begin{minipage}[c]{.45\textwidth}
     \includegraphics[width=1\textwidth]{EMSTriage}
   \end{minipage}
@@ -314,8 +302,20 @@
 \begin{frame}
   \frametitle{Simple Triage and Rapid Treatment (START)}
   \centering
+  \includegraphics[width=1\textwidth]{Start}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Simple Triage and Rapid Treatment (START)}
+  \centering
   \includegraphics[width=.5\textwidth]{StartAdultTriageAlgorithm}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Oh no! The red line has derailed!}
+  \includegraphics[width=1\textwidth]{train_derailed}
+\end{frame}
+
 
 \begin{frame}
   \frametitle{Meanwhile, you must prepare the UChicago Trauma Unit}
@@ -328,7 +328,7 @@
     \item \textbf{Problem:} Not enough resources for all injured
     \item Expect around 30 patients but we only have the capacity to help 10!\pause
     \item Any patients who cannot be seen here will need to be transported to the next closest unit which will take an additional 50 minutes!\pause
-    \item Who should be admit and who should we turn away?
+    \item \textbf{Who should be admitted and who should we turn away?}
   \end{itemize}
 \end{frame}
 
@@ -341,7 +341,7 @@
     \item First-Come-First-Serve
     \item Reserve beds for IMMEDIATE patients
     \item Reserve beds for DELAYED patients
-    \item Research some for IMMEDIATE and some for DELAYED
+    \item Reserve some for IMMEDIATE and some for DELAYED
     \item Other?
   \end{itemize}
 \end{frame}
@@ -371,16 +371,23 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Humans are very predictable!}
-  \begin{itemize}
-    \item Many of the things discussed above are random
-    \item Why might we want to use a computer to generate random events rather than just doing it ourself? \pause
-    \begin{itemize}
-      \item Human's are very bad at being truly random
-      \item \textcolor{blue}{\href{http://www.mindreaderpro.appspot.com/}{Mindreader!}}
-    \end{itemize}
-  \end{itemize}
+  \frametitle{Based On Actual Research!}
+  \centering
+  \includegraphics[scale = .3]{paper}
 \end{frame}
+
+
+% \begin{frame}
+%   \frametitle{Humans are very predictable!}
+%   \begin{itemize}
+%     \item Many of the things discussed above are random
+%     \item Why might we want to use a computer to generate random events rather than just doing it ourself? \pause
+%     \begin{itemize}
+%       \item Human's are very bad at being truly random
+%       \item \textcolor{blue}{\href{http://www.mindreaderpro.appspot.com/}{Mindreader!}}
+%     \end{itemize}
+%   \end{itemize}
+% \end{frame}
 
 % \begin{frame}
 %   \frametitle{Modeling Arrivals}
@@ -397,6 +404,18 @@
 %   \frametitle{SIMULATE!}
 % \end{frame}
 
+
+% \begin{frame}
+%   \frametitle{How can you learn more?}
+%   There are \textbf{TONS} of \textbf{FREE RESOURCES}:
+%   \begin{itemize}
+%     \item Google python tutorial: https://developers.google.com/edu/python/
+%     \item MIT Open Courseware: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/
+%     \item Harvard online courses: https://online-learning.harvard.edu/course/cs50-introduction-computer-science
+%     \item Codecademy: https://www.codecademy.com/
+%     \item Hackerrank: https://www.hackerrank.com/
+%   \end{itemize}
+% \end{frame}
 
 
 
