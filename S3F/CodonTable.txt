@@ -1,5 +1,5 @@
 DNA codon table. Stop codon is coded as: Stp, O, Stop
-Codon	Amino Acid	Letter	 Full Name
+Codon	Amino Acid	Letter	Full Name
 AAA	Lys	K	Lysine
 AAC	Asn	N	Asparagine
 AAG	Lys	K	Lysine
