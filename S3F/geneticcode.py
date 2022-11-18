@@ -68,7 +68,7 @@ def make_picture(sequence):
     
     #write the letter code on the circle
     ax.text(codon_number,0,#x,y position of the text
-            amino_acid,#variable containing the text
+            letter_code,#variable containing the text
             fontsize=20,#size of the text 
             color="black",#color of the text 
             horizontalalignment='center',#center the text horizontally
