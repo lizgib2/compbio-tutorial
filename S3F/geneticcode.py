@@ -43,7 +43,7 @@ def decode_sequence(sequence):
     print("Letter Code:",letter_code)
     print()
     
-    return amino_acid_list
+  return amino_acid_list
   
 def make_picture(sequence):
   #set up figure
