@@ -55,7 +55,7 @@ def make_picture(sequence):
     codon = sequence[3*codon_number:3*codon_number+3]
     
     #look up amino acid letter and color
-    amino_acid_color = codon_table.loc[codon.upper(),"Bead Color"]
+    amino_acid_color = codon_table.loc[codon.upper(),"Color"]
     letter_code = codon_table.loc[codon.upper(),"Letter Code"]
     
     #draw a circle
@@ -64,7 +64,7 @@ def make_picture(sequence):
                         facecolor=amino_acid_color.lower().replace(" ",""),#color
                         edgecolor="black",#black line around it
                         alpha=0.7)#make the circle a little transparent
-    ax.add_patch(bead)#actually draw the circle
+    ax.add_patch(circle)#actually draw the circle
     
     #write the letter code on the circle
     ax.text(codon_number,0,#x,y position of the text
