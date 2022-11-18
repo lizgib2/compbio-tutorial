@@ -16,8 +16,8 @@ codon_table = codon_table.drop(columns = "3 Letter Code")
 def decode_sequence(sequence):
   #figure out how many codons are in the sequence
   how_many_codons = len(sequence)//3
-  print("How many codons are there?")
-  print(how_many_codons)
+#   print("How many codons are there?")
+#   print(how_many_codons)
   
   #set up lists to keep track of what we find
   amino_acid_list= []
