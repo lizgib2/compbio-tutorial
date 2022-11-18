@@ -1,6 +1,3 @@
-from google.colab import drive
-drive.mount("/content/drive")
-
 #Import the libraries we need to use code from
 import pandas as pd
 import numpy as np
