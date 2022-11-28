@@ -36,7 +36,7 @@ def show_codon_table(codon_table):
   for row in text:
     rowcolors = ["white"]
     for index in row[1::2]:
-      color = codon_table["Colors"][index]
+      color = codon_table["Color"][index]
       rowcolors.append(color)
     colors.append(rowcolors)
   plt.table(cellText=text,cellColours=colors)
