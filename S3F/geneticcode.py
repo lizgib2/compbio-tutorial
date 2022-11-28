@@ -4,7 +4,7 @@ import numpy as np
 import requests
 from itertools import zip_longest
 from matplotlib import pyplot as plt
-
+from matplotlib import table as table
 #create the basics of the codon table 
 master = "https://raw.githubusercontent.com/suzannastep/compbio-tutorial/master/S3F/CodonTable.txt"
 codon_table = requests.get(master)
@@ -12,6 +12,30 @@ codon_table = codon_table.text
 codon_table = np.array([[st.split("\t")][0][:4] for st in codon_table.split("\n")][2:-1])
 codon_table = pd.DataFrame(codon_table[:,:-4:-1],index=codon_table[:,0],columns=["Amino Acid","Letter Code","3 Letter Code"])
 codon_table = codon_table.drop(columns = "3 Letter Code")
+colors = {
+  "Aspartic_acid"   :"white",
+  "Glutamic_acid"   :"orange",
+  "Glycine"         :"green",
+  "Isoleucine"      :"yellow",
+  "Methionine"      :"purple",
+  "Asparagine"      :"pink",
+  "Valine"          :"lightblue",
+  "Tyrosine"        :"darkblue",
+  "Lysine"          :"lime",
+  "Threonine"       :"turquoise",
+  "Arginine"        :"tomato",
+  "Serine"          :"plum",
+  "Glutamine"       :"lightgreen",
+  "Histidine"       :"sienna",
+  "Proline"         :"red",
+  "Leucine"         :"hotpink",
+  "Alanine"         :"aqua",
+  "Stop"            :"indigo",
+  "Cysteine"        :"slateblue",
+  "Tryptophan"      :"teal",
+  "Phenylalanine"   :"gray",
+}
+codon_table["Color"] = [colors[amino_acid] for amino_acid in codon_table["Amino Acid"]]
 
 #function to show a colored codon table 
 def show_codon_table(codon_table):
@@ -33,15 +57,36 @@ def show_codon_table(codon_table):
           ["G","GTA","Valine","GCA","Alanine","GAA","Glutamic_acid","GGA","Alanine"],
           ["G","GTG","Valine","GCG","Alanine","GAG","Glutamic_acid","GGG","Alanine"]]
   colors = [["white"]*9]
-  for row in text:
+  for row in text[1:]:
     rowcolors = ["white"]
     for index in row[1::2]:
-      color = codon_table["Color"][index]
+      color = codon_table.loc[index,"Color"]
+      rowcolors.append(color)
       rowcolors.append(color)
     colors.append(rowcolors)
-  plt.table(cellText=text,cellColours=colors)
-  plt.ylabel("First Base")
-  plt.xlabel("Second Base")
+  fig, ax = plt.subplots()
+  # hide axes
+  fig.patch.set_visible(False)
+  t = table.Table(ax,loc='center')
+  for rownum,row in enumerate(text):
+    for colnum,item in enumerate(row):
+      if colnum > 0 and colnum%2 == 0:
+        width = 0.35
+      else:
+        width = 0.12
+      c = t.add_cell(rownum,
+                 colnum,
+                 text=text[rownum][colnum],
+                 facecolor = colors[rownum][colnum],
+                 width=width,
+                 height=0.12,
+                 loc="center")
+      c.set_alpha(0.7)
+  t.auto_set_font_size(False)
+  t.set_fontsize(15)
+  ax.add_table(t)
+  plt.axis('off')
+  plt.axis('equal')
   plt.show()
 
 def decode_sequence(sequence):
