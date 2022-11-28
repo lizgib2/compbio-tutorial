@@ -13,6 +13,37 @@ codon_table = np.array([[st.split("\t")][0][:4] for st in codon_table.split("\n"
 codon_table = pd.DataFrame(codon_table[:,:-4:-1],index=codon_table[:,0],columns=["Amino Acid","Letter Code","3 Letter Code"])
 codon_table = codon_table.drop(columns = "3 Letter Code")
 
+#function to show a colored codon table 
+def show_codon_table(codon_table):
+  text = [["","T","","C","","A","","G",""],
+          ["T","TTT","Phenylalanine","TCT","Serine","TAT","Tyrosine","TGT","Cysteine"],
+          ["T","TTC","Phenylalanine","TCC","Serine","TAC","Tyrosine","TGC","Cysteine"],
+          ["T","TTA","Leucine","TCA","Serine","TAA","Stop","TGA","Stop"],
+          ["T","TTG","Leucine","TCG","Serine","TAG","Stop","TGG","Tryptophan"],
+          ["C","CTT","Leucine","CCT","Proline","CAT","Histidine","CGT","Arginine"],
+          ["C","CTC","Leucine","CCC","Proline","CAC","Histidine","CGC","Arginine"],
+          ["C","CTA","Leucine","CCA","Proline","CAA","Glutamine","CGA","Arginine"],
+          ["C","CTG","Leucine","CCG","Proline","CAG","Glutamine","CGG","Arginine"],
+          ["A","ATT","Isoleucine","ACT","Threonine","AAT","Asparagine","AGT","Serine"],
+          ["A","ATC","Isoleucine","ACC","Threonine","AAC","Asparagine","AGC","Serine"],
+          ["A","ATA","Isoleucine","ACA","Threonine","AAA","Lysine","AGA","Arginine"],
+          ["A","ATG","Methionine","ACG","Threonine","AAG","Lysine","AGG","Arginine"],
+          ["G","GTT","Valine","GCT","Alanine","GAT","Aspartic_acid","GGT","Alanine"],
+          ["G","GTC","Valine","GCC","Alanine","GAC","Aspartic_acid","GGC","Alanine"],
+          ["G","GTA","Valine","GCA","Alanine","GAA","Glutamic_acid","GGA","Alanine"],
+          ["G","GTG","Valine","GCG","Alanine","GAG","Glutamic_acid","GGG","Alanine"]]
+  colors = [["white"]*9]
+  for row in text:
+    rowcolors = ["white"]
+    for index in row[1::2]:
+      color = codon_table["Colors"][index]
+      rowcolors.append(color)
+    colors.append(rowcolors)
+  plt.table(cellText=text,cellColours=colors)
+  plt.ylabel("First Base")
+  plt.xlabel("Second Base")
+  plt.show()
+
 def decode_sequence(sequence):
   #figure out how many codons are in the sequence
   how_many_codons = len(sequence)//3
