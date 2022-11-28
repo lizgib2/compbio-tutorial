@@ -52,10 +52,10 @@ def show_codon_table(codon_table):
           ["A","ATC","Isoleucine (I)","ACC","Threonine (T)","AAC","Asparagine (N)","AGC","Serine (S)"],
           ["A","ATA","Isoleucine (I)","ACA","Threonine (T)","AAA","Lysine (K)","AGA","Arginine (R)"],
           ["A","ATG","Methionine (M)","ACG","Threonine (T)","AAG","Lysine (K)","AGG","Arginine (R)"],
-          ["G","GTT","Valine (V)","GCT","Alanine (A)","GAT","Aspartic_acid (D)","GGT","Alanine (A)"],
-          ["G","GTC","Valine (V)","GCC","Alanine (A)","GAC","Aspartic_acid (D)","GGC","Alanine (A)"],
-          ["G","GTA","Valine (V)","GCA","Alanine (A)","GAA","Glutamic_acid (E)","GGA","Alanine (A)"],
-          ["G","GTG","Valine (V)","GCG","Alanine (A)","GAG","Glutamic_acid (E)","GGG","Alanine (A)"]]
+          ["G","GTT","Valine (V)","GCT","Alanine (A)","GAT","Aspartic_acid (D)","GGT","Glycine (A)"],
+          ["G","GTC","Valine (V)","GCC","Alanine (A)","GAC","Aspartic_acid (D)","GGC","Glycine (A)"],
+          ["G","GTA","Valine (V)","GCA","Alanine (A)","GAA","Glutamic_acid (E)","GGA","Glycine (A)"],
+          ["G","GTG","Valine (V)","GCG","Alanine (A)","GAG","Glutamic_acid (E)","GGG","Glycine (A)"]]
   colors = [["white"]*9]
   for row in text[1:]:
     rowcolors = ["white"]
