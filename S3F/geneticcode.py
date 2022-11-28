@@ -40,22 +40,22 @@ codon_table["Color"] = [colors[amino_acid] for amino_acid in codon_table["Amino 
 #function to show a colored codon table 
 def show_codon_table(codon_table):
   text = [["","T","","C","","A","","G",""],
-          ["T","TTT","Phenylalanine","TCT","Serine","TAT","Tyrosine","TGT","Cysteine"],
-          ["T","TTC","Phenylalanine","TCC","Serine","TAC","Tyrosine","TGC","Cysteine"],
-          ["T","TTA","Leucine","TCA","Serine","TAA","Stop","TGA","Stop"],
-          ["T","TTG","Leucine","TCG","Serine","TAG","Stop","TGG","Tryptophan"],
-          ["C","CTT","Leucine","CCT","Proline","CAT","Histidine","CGT","Arginine"],
-          ["C","CTC","Leucine","CCC","Proline","CAC","Histidine","CGC","Arginine"],
-          ["C","CTA","Leucine","CCA","Proline","CAA","Glutamine","CGA","Arginine"],
-          ["C","CTG","Leucine","CCG","Proline","CAG","Glutamine","CGG","Arginine"],
-          ["A","ATT","Isoleucine","ACT","Threonine","AAT","Asparagine","AGT","Serine"],
-          ["A","ATC","Isoleucine","ACC","Threonine","AAC","Asparagine","AGC","Serine"],
-          ["A","ATA","Isoleucine","ACA","Threonine","AAA","Lysine","AGA","Arginine"],
-          ["A","ATG","Methionine","ACG","Threonine","AAG","Lysine","AGG","Arginine"],
-          ["G","GTT","Valine","GCT","Alanine","GAT","Aspartic_acid","GGT","Alanine"],
-          ["G","GTC","Valine","GCC","Alanine","GAC","Aspartic_acid","GGC","Alanine"],
-          ["G","GTA","Valine","GCA","Alanine","GAA","Glutamic_acid","GGA","Alanine"],
-          ["G","GTG","Valine","GCG","Alanine","GAG","Glutamic_acid","GGG","Alanine"]]
+          ["T","TTT","Phenylalanine (F)","TCT","Serine (S)","TAT","Tyrosine (Y)","TGT","Cysteine (C)"],
+          ["T","TTC","Phenylalanine (F)","TCC","Serine (S)","TAC","Tyrosine (Y)","TGC","Cysteine (C)"],
+          ["T","TTA","Leucine (L)","TCA","Serine (S)","TAA","Stop (O)","TGA","Stop (O)"],
+          ["T","TTG","Leucine (L)","TCG","Serine (S)","TAG","Stop (O)","TGG","Tryptophan (W)"],
+          ["C","CTT","Leucine (L)","CCT","Proline (P)","CAT","Histidine (H)","CGT","Arginine (R)"],
+          ["C","CTC","Leucine (L)","CCC","Proline (P)","CAC","Histidine (H)","CGC","Arginine (R)"],
+          ["C","CTA","Leucine (L)","CCA","Proline (P)","CAA","Glutamine (Q)","CGA","Arginine (R)"],
+          ["C","CTG","Leucine (L)","CCG","Proline (P)","CAG","Glutamine (Q)","CGG","Arginine (R)"],
+          ["A","ATT","Isoleucine (I)","ACT","Threonine (T)","AAT","Asparagine (N)","AGT","Serine (S)"],
+          ["A","ATC","Isoleucine (I)","ACC","Threonine (T)","AAC","Asparagine (N)","AGC","Serine (S)"],
+          ["A","ATA","Isoleucine (I)","ACA","Threonine (T)","AAA","Lysine (K)","AGA","Arginine (R)"],
+          ["A","ATG","Methionine (M)","ACG","Threonine (T)","AAG","Lysine (K)","AGG","Arginine (R)"],
+          ["G","GTT","Valine (V)","GCT","Alanine (A)","GAT","Aspartic_acid (D)","GGT","Alanine (A)"],
+          ["G","GTC","Valine (V)","GCC","Alanine (A)","GAC","Aspartic_acid (D)","GGC","Alanine (A)"],
+          ["G","GTA","Valine (V)","GCA","Alanine (A)","GAA","Glutamic_acid (E)","GGA","Alanine (A)"],
+          ["G","GTG","Valine (V)","GCG","Alanine (A)","GAG","Glutamic_acid (E)","GGG","Alanine (A)"]]
   colors = [["white"]*9]
   for row in text[1:]:
     rowcolors = ["white"]
