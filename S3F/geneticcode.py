@@ -71,7 +71,7 @@ def show_codon_table(codon_table):
   for rownum,row in enumerate(text):
     for colnum,item in enumerate(row):
       if colnum > 0 and colnum%2 == 0:
-        width = 0.35
+        width = 0.4
       else:
         width = 0.12
       c = t.add_cell(rownum,
