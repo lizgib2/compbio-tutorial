@@ -17,7 +17,7 @@ colors = {
   "Glutamic_acid"   :"orange",
   "Glycine"         :"green",
   "Isoleucine"      :"yellow",
-  "Methionine"      :"purple",
+  "Methionine"      :"violet",
   "Asparagine"      :"pink",
   "Valine"          :"lightblue",
   "Tyrosine"        :"darkblue",
