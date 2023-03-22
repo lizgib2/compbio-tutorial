@@ -30,7 +30,7 @@ colors = {
   "Proline"         :"red",
   "Leucine"         :"hotpink",
   "Alanine"         :"aqua",
-  "Stop"            :"indigo",
+  "Stop"            :"brown",
   "Cysteine"        :"slateblue",
   "Tryptophan"      :"teal",
   "Phenylalanine"   :"gray",
