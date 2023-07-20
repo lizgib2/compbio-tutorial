@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.special import gamma
 import matplotlib.pyplot as plt
+import pandas as pd
 
 # Define patient arrival rate function
 
@@ -182,17 +183,13 @@ def simulate(reps, numBeds, numPatients, odds, peakI, peakD, probI, probD):
         died_IO[i] = total_patients - survived_IO[i]
         final_beds_FCFS[i] = bedsRemaining_FCFS
         final_beds_IO[i] = bedsRemaining_IO
-    output = [died_FCFS, died_IO, survived_FCFS, survived_IO, final_beds_FCFS, final_beds_IO]
-    if reps == 1:
-        print('FCFS resulted in ' + str(output[0][0]) + ' deaths and ' + str(output[2][0])
-              + ' survivers with ' + str(output[4][0]) + ' beds remaining.')
-        print('IMMEDIATE ONLY resulted in ' + str(output[1][0]) + ' deaths and ' + str(output[3][0])
-              + ' survivers with ' + str(output[5][0]) + ' beds remaining.')
-    elif reps > 1:
-        print('FCFS resulted in an average of ' + str(np.mean(output[0])) + ' deaths and ' + str(np.mean(output[2]))
-              + ' survivers with ' + str(np.mean(output[4])) + ' beds remaining.')
-        print('IMMEDIATE ONLY resulted in an average of ' + str(np.mean(output[1])) + ' deaths and ' + str(np.mean(output[3]))
-              + ' survivers with ' + str(np.mean(output[5])) + ' beds remaining.')
-    else:
+    output = {"FCFS_Died":died_FCFS, 
+              "IO_Died":died_IO, 
+              "FCFS_Survived":survived_FCFS, 
+              "IO_Survived":survived_IO, 
+              "FCFS_Beds":final_beds_FCFS, 
+              "IO_Beds":final_beds_IO}
+    output = pd.DataFrame(output)
+    if reps < 1:
         raise Exception('Please input number of repetitions which is greater than 0.')
     return output
