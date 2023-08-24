@@ -5,8 +5,6 @@ from scipy.stats import linregress
 import pandas as pd
 import matplotlib.pyplot as plt
 ​
-​
-# the code Marida wrote
 def simulate_genotypes(N, L):
     # Function to simulate genotypes
     ps = npr.beta(4, 4, size=L)
@@ -64,9 +62,3 @@ def gwas(genotypes, phenotypes):
         sumstats['pvalue'].append(gwas_res[2])
         i += 1
     return(sumstats)
-​
-​
-#print(genotypes)
-#print(disease)
-# get probability of disease for a given set of genotypes
-#print(simulate_disease(my_genotype,beta,0.1))
