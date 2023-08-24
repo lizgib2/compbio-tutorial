@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def simulate_genotypes(number_of_people, number_of_SNPs=10):
+def simulate_genotypes(number_of_people, number_of_SNPs=5):
     # Function to simulate genotypes
     probabilities = npr.beta(4, 4, size=number_of_SNPs)
     genotypes = np.empty((number_of_people, number_of_SNPs), dtype=int)
