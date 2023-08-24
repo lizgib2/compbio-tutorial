@@ -5,7 +5,7 @@ from scipy.stats import linregress
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def simulate_genotypes(N, L):
+def simulate_genotypes(N, L=10):
     # Function to simulate genotypes
     ps = npr.beta(4, 4, size=L)
     G = np.empty((N, L), dtype=int)
