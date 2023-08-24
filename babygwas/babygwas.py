@@ -35,7 +35,7 @@ def simulate_LDL_levels(genotypes, standard_deviation=12):
 def create_dataframe(genotypes,LDL_levels):
   columns = [f"SNP {i+1}" for i in range(10)]
   df = pd.DataFrame(genotypes,columns=columns)
-  df["LDL Cholesetrol Level"] = ldl_levels
+  df["LDL Cholesetrol Level"] = LDL_levels
   return df
 
 def linear_regression(x,y):
