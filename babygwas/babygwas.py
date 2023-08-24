@@ -4,6 +4,7 @@ import numpy.random as npr
 from scipy.stats import linregress
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 def simulate_genotypes(number_of_people, number_of_SNPs=10):
     # Function to simulate genotypes
