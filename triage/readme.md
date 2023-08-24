@@ -53,18 +53,18 @@ By the end of this class, students will be able to: 
 1. Discuss what the students have learned about the role of running simulations v. looking at data in the real world.
 1. Challenge: instruct the students to see if they can find different combinations of parameters where each policy is better. (HSS-MD.B.7)
 
-## Associated Common Core High School Math Standards
+## Associated Common Core High School Math Standards
 
 - HSS-ID.A. Summarize, represent, and interpret data on a single count or measurement variable 
-- HSS-ID.A.1 Represent data with plots on the real number line (dot plots, histograms, and box plots). 
-- HSS-ID.A.2 Use statistics appropriate to the shape of the data distribution to compare center (median, mean) and spread (interquartile range, standard deviation) of two or more different data sets. 
-- HSS-ID.A.3 Interpret differences in shape, center, and spread in the context of the data sets, accounting for possible effects of extreme data points (outliers). 
+    - HSS-ID.A.1  Represent data with plots on the real number line (dot plots, histograms, and box plots). 
+    - HSS-ID.A.2  Use statistics appropriate to the shape of the data distribution to compare center (median, mean) and spread (interquartile range, standard deviation) of two or more different data sets. 
+    - HSS-ID.A.3  Interpret differences in shape, center, and spread in the context of the data sets, accounting for possible effects of extreme data points (outliers). 
 - HSS-CP.A. Understand independence and conditional probability and use them to interpret data 
-- HSS-CP.A.3 Understand the conditional probability of A given B as P(A and B)/P(B), and interpret independence of A and B as saying that the conditional probability of A given B is the same as the probability of A, and the conditional probability of B given A is the same as the probability of B. 
+    - HSS-CP.A.3  Understand the conditional probability of A given B as P(A and B)/P(B), and interpret independence of A and B as saying that the conditional probability of A given B is the same as the probability of A, and the conditional probability of B given A is the same as the probability of B. 
 - HSS-MD.A. Calculate expected values and use them to solve problems 
-- HSS-MD.A.1 (+) Define a random variable for a quantity of interest by assigning a numerical value to each event in a sample space; graph the corresponding probability distribution using the same graphical displays as for data distributions. 
-- HSS-MD.A.2 (+) Calculate the expected value of a random variable; interpret it as the mean of the probability distribution. 
-- HSS-MD.A.4 (+) Develop a probability distribution for a random variable defined for a sample space in which probabilities are assigned empirically; find the expected value. For example, find a current data distribution on the number of TV sets per household in the United States, and calculate the expected number of sets per household. How many TV sets would you expect to find in 100 randomly selected households? 
+    - HSS-MD.A.1 (+) Define a random variable for a quantity of interest by assigning a numerical value to each event in a sample space; graph the corresponding probability distribution using the same graphical displays as for data distributions. 
+    - HSS-MD.A.2 (+) Calculate the expected value of a random variable; interpret it as the mean of the probability distribution. 
+    - HSS-MD.A.4 (+) Develop a probability distribution for a random variable defined for a sample space in which probabilities are assigned empirically; find the expected value. For example, find a current data distribution on the number of TV sets per household in the United States, and calculate the expected number of sets per household. How many TV sets would you expect to find in 100 randomly selected households? 
 - HSS-MD.B. Use probability to evaluate outcomes of decisions
-- HSS-MD.B.6 (+) Use probabilities to make fair decisions (e.g., drawing by lots, using a random number generator). 
-- HSS-MD.B.7 (+) Analyze decisions and strategies using probability concepts (e.g., product testing, medical testing, pulling a hockey goalie at the end of a game). 
+    - HSS-MD.B.6 (+) Use probabilities to make fair decisions (e.g., drawing by lots, using a random number generator). 
+    - HSS-MD.B.7 (+) Analyze decisions and strategies using probability concepts (e.g., product testing, medical testing, pulling a hockey goalie at the end of a game). 
