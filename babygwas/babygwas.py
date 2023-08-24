@@ -6,7 +6,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def simulate_genotypes(number_of_people, number_of_SNPs=5):
+number_of_SNPs = 5
+
+def simulate_genotypes(number_of_people):
     # Function to simulate genotypes
     probabilities = npr.beta(4, 4, size=number_of_SNPs)
     genotypes = np.empty((number_of_people, number_of_SNPs), dtype=int)
@@ -16,7 +18,7 @@ def simulate_genotypes(number_of_people, number_of_SNPs=5):
 
     return genotypes
 
-def true_effect_sizes(number_of_SNPs=5, non_zero_effect_size=0.5):
+def true_effect_sizes(non_zero_effect_size=0.5):
     # Generate a beta vector with zeros everywhere apart from three fixed loci
     m = np.zeros(number_of_SNPs)
     fixed_indices = [0,1,4]
@@ -34,7 +36,7 @@ def simulate_LDL_levels(genotypes, standard_deviation=12):
     return LDL_levels
 
 def create_dataframe(genotypes,LDL_levels):
-  columns = [f"SNP {i+1}" for i in range(10)]
+  columns = [f"SNP {i+1}" for i in range(number_of_SNPs)]
   df = pd.DataFrame(genotypes,columns=columns)
   df["LDL Cholesetrol Level"] = LDL_levels
   return df
