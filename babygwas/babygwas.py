@@ -16,11 +16,11 @@ def simulate_genotypes(number_of_people, number_of_SNPs=5):
 
     return genotypes
 
-def true_effect_sizes(L=10, non_zero_effect_size=0.5):
+def true_effect_sizes(number_of_SNPs=5, non_zero_effect_size=0.5):
     # Generate a beta vector with zeros everywhere apart from three fixed loci
-    m = np.zeros(L)
-    fixed_indices = [0,1,5,7]
-    m[fixed_indices] = [-5,7,-4,4]
+    m = np.zeros(number_of_SNPs)
+    fixed_indices = [0,1,4]
+    m[fixed_indices] = [-5,7,-4]
     return m
 
 def simulate_LDL_levels(genotypes, standard_deviation=12):
