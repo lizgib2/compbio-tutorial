@@ -8,11 +8,14 @@ By the end of this class, students will be able to: 
 - Explain why statistical and computational tools are needed to model problems in medicine
 
 ## Necessary Items:
+
 School provides:
+
   - Computer access for each student with Google Colab unblocked
 
 Workshop provides:
-  - The triage slides :these can be found in the “Slides” sub-directory within the “triage” folder. You may want to edit these a bit (we’ll talk more about this later).
+
+  - The triage slides: these can be found in the “Slides” sub-directory within the “triage” folder. You may want to edit these a bit (we’ll talk more about this later).
   - The Jupyter notebook entitled “triage_exercise.ipynb” from the “triage” folder.
   - The file entitled “triage_funcs.py” from the “triage” directory. Note that you will never need to open this file but it must be in the same folder as “triage_exercise.ipynb” in order for the activity to function properly.
   - A set of index cars with at least two colors, preferably blue and orange OR yellow and red.
