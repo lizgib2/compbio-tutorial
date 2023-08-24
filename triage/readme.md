@@ -9,12 +9,12 @@ By the end of this class, students will be able to: 
 
 ## Necessary Items:
 - School provides:
-            - Computer access for each student with Google Colab unblocked
+  - Computer access for each student with Google Colab unblocked
 - Workshop provides:
-            - The triage slides :these can be found in the “Slides” sub-directory within the “triage” folder. You may want to edit these a bit (we’ll talk more about this later).
-            - The Jupyter notebook entitled “triage_exercise.ipynb” from the “triage” folder.
-            - The file entitled “triage_funcs.py” from the “triage” directory. Note that you will never need to open this file but it must be in the same folder as “triage_exercise.ipynb” in order for the activity to function properly.
-            - A set of index cars with at least two colors, preferably blue and orange OR yellow and red.
+  - The triage slides :these can be found in the “Slides” sub-directory within the “triage” folder. You may want to edit these a bit (we’ll talk more about this later).
+  - The Jupyter notebook entitled “triage_exercise.ipynb” from the “triage” folder.
+  - The file entitled “triage_funcs.py” from the “triage” directory. Note that you will never need to open this file but it must be in the same folder as “triage_exercise.ipynb” in order for the activity to function properly.
+  - A set of index cars with at least two colors, preferably blue and orange OR yellow and red.
 
 ## Directions:
 1. Open the triage slides. (Make sure you’ve looked through the slides several times before actually giving the workshop).
