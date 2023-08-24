@@ -19,7 +19,7 @@ def true_effect_sizes(L=10, non_zero_effect_size=0.5):
     # Generate a beta vector with zeros everywhere apart from three fixed loci
     m = np.zeros(L)
     fixed_indices = [0,1,5,7]
-    m[fixed_indices] = [2,7,-4,4]
+    m[fixed_indices] = [4,7,-4,4]
     return m
 
 def simulate_LDL_levels(genotypes, standard_deviation=12):
