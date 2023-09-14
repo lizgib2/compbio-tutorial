@@ -20,14 +20,13 @@ def simulate_genotypes(number_of_people):
 
 def true_effect_sizes():
     # Generate an effect size vector with only two truly causal SNPs
-    return [0,-5,0,7,0]
+    return [0,-10,0,12,0]
 
 def simulate_LDL_levels(genotypes, standard_deviation=12):
     # Simulate disease status for each individual
     m = true_effect_sizes()
-    normalized_genotypes = (genotypes - genotypes.mean(axis=1, keepdims=True)) / genotypes.std(axis=1, keepdims=True)
-    number_of_people, number_of_SNPs = normalized_genotypes.shape
-    genetic_component = np.dot(normalized_genotypes, m)
+    number_of_people, number_of_SNPs = genotypes.shape
+    genetic_component = np.dot(genotypes, m)
     random_component = np.random.normal(0, standard_deviation, number_of_people)
     LDL_levels = random_component + genetic_component + 125
     return LDL_levels
