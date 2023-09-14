@@ -18,12 +18,9 @@ def simulate_genotypes(number_of_people):
 
     return genotypes
 
-def true_effect_sizes(non_zero_effect_size=0.5):
-    # Generate a beta vector with zeros everywhere apart from three fixed loci
-    m = np.zeros(number_of_SNPs)
-    fixed_indices = [0,1,4]
-    m[fixed_indices] = [-5,7,-4]
-    return m
+def true_effect_sizes():
+    # Generate an effect size vector with only two truly causal SNPs
+    return [0,-5,0,7,0]
 
 def simulate_LDL_levels(genotypes, standard_deviation=12):
     # Simulate disease status for each individual
