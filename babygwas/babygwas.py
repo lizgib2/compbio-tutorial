@@ -27,7 +27,7 @@ def simulate_LDL_levels(genotypes, standard_deviation=12):
     number_of_people, number_of_SNPs = genotypes.shape
     genetic_component = np.dot(genotypes, m)
     environmental_component = np.random.normal(0, standard_deviation, number_of_people)
-    LDL_levels = environmental_component + genetic_component + 90
+    LDL_levels = environmental_component + genetic_component + 100
     return LDL_levels
 
 def create_dataframe(genotypes,LDL_levels):
