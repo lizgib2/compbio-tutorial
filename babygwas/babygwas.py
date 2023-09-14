@@ -8,9 +8,14 @@ import seaborn as sns
 
 number_of_SNPs = 5
 
+def allele_frequencies():
+    np.random.seed(42)
+    f = npr.beta(4, 4, size=number_of_SNPs)
+    return f
+
 def simulate_genotypes(number_of_people):
     # Function to simulate genotypes
-    probabilities = npr.beta(4, 4, size=number_of_SNPs)
+    probabilities = allele_frequencies()
     genotypes = np.empty((number_of_people, number_of_SNPs), dtype=int)
 
     for i in range(number_of_SNPs):
