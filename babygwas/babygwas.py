@@ -26,7 +26,7 @@ def simulate_genotypes(number_of_people):
 def true_effect_sizes():
     return [0,-20,0,21,0]
 
-def simulate_LDL_level(genotypes, standard_deviation=12):
+def simulate_LDL_levels(genotypes, standard_deviation=12):
     #cast to an arary so that this works with list or array input
     genotypes = np.array(genotypes)
     # Simulate disease status for each individual
