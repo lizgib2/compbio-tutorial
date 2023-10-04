@@ -31,16 +31,12 @@ def simulate_LDL_levels(genotypes, standard_deviation=12):
     genotypes = np.array(genotypes)
     # Simulate disease status for each individual
     m = true_effect_sizes()
-    if genotypes.shape == 2:
-        #if genotypes from several people, each person is a row, each SNP is a column
-        number_of_people, number_of_SNPs = genotypes.shape
-    else:
-        #if genotypes from one people, lenght of the genotype is the # of SNPs
-        number_of_SNPs = len(genotypes) 
-        number_of_people = 1
+    number_of_people, number_of_SNPs = genotypes.shape
     genetic_component = np.dot(genotypes, m)
     environmental_component = np.random.normal(0, standard_deviation, number_of_people)
+    print(genetic_component,environmental_component)
     LDL_levels = environmental_component + genetic_component + 100
+    print(LDL_levels)
     return np.round(LDL_levels,1)
 
 def create_dataframe(genotypes,LDL_levels):
