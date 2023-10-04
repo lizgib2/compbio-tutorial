@@ -47,6 +47,7 @@ def create_dataframe(genotypes,LDL_levels):
   columns = [f"SNP {i+1}" for i in range(number_of_SNPs)]
   df = pd.DataFrame(genotypes,columns=columns)
   df["LDL Cholesetrol Level"] = LDL_levels
+  df.index.name = 'Patient'
   return df
 
 def linear_regression(x,y):
