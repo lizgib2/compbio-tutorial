@@ -34,7 +34,7 @@ def simulate_LDL_levels(genotypes, standard_deviation=12):
     if genotypes.shape == 2:
         #if genotypes from several people, each person is a row, each SNP is a column
         number_of_people, number_of_SNPs = genotypes.shape
-    else
+    else:
         #if genotypes from one people, lenght of the genotype is the # of SNPs
         number_of_SNPs = len(genotypes) 
         number_of_people = 1
