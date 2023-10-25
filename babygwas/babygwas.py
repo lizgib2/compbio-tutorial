@@ -76,4 +76,4 @@ def gwas(genotypes, phenotypes):
     return(sumstats)
 
 if __name__ is "__main__":
-    np.random.seed(time())
+    np.random.seed(np.int64(time()))
