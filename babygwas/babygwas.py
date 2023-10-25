@@ -62,7 +62,7 @@ def line_of_best_fit(x, y):
     Create a line of best fit for each
     '''
     res = linear_regression(x, y)
-    res = {"effect size (slope)":    res.slope
-           "intercept"  :    res.intercept
+    res = {"effect size (slope)":    res.slope,
+           "intercept"  :    res.intercept,
            "p value"    :    res.pvalue}
     return res
