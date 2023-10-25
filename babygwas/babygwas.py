@@ -5,6 +5,7 @@ from scipy.stats import linregress
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from time import time
 
 number_of_SNPs = 5
 
@@ -75,4 +76,4 @@ def gwas(genotypes, phenotypes):
     return(sumstats)
 
 if __name__ is "__main__":
-    np.random.seed(time.time())
+    np.random.seed(time())
