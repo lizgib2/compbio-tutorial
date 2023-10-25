@@ -29,7 +29,7 @@ def true_effect_sizes():
 
 def simulate_LDL_levels(genotypes, standard_deviation=12,randomseed=None):
     if randomseed is None:
-        np.random.seed(np.int64(time())
+        np.random.seed(np.int64(time()))
     else:
         np.random.seed(randomseed)
     #cast to an arary so that this works with list or array input
