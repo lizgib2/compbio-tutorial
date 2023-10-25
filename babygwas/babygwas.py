@@ -14,7 +14,11 @@ def allele_frequencies():
     f = npr.beta(4, 4, size=number_of_SNPs)
     return f
 
-def simulate_genotypes(number_of_people):
+def simulate_genotypes(number_of_people,randomseed=None):
+    if randomseed is None:
+        np.random.seed(np.int64(time()))
+    else:
+        np.random.seed(randomseed)
     # Function to simulate genotypes
     probabilities = allele_frequencies()
     genotypes = np.empty((number_of_people, number_of_SNPs), dtype=int)
