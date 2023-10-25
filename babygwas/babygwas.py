@@ -16,17 +16,17 @@ def allele_frequencies():
     return f
 
 def simulate_genotypes(number_of_people=1,randomseed=None):
+    # get allele frequencies
+    probabilities = allele_frequencies()
+    #set the random seed
     if randomseed is None:
         np.random.seed(np.int64(time()))
     else:
         np.random.seed(randomseed)
-    # Function to simulate genotypes
-    probabilities = allele_frequencies()
+    #generate genotypes
     genotypes = np.empty((number_of_people, number_of_SNPs), dtype=int)
-
     for i in range(number_of_SNPs):
         genotypes[:, i] = npr.binomial(2, probabilities[i], size=number_of_people)
-
     return genotypes
 
 def true_effect_sizes():
