@@ -6,6 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from time import time
+from math import floor, log10, inf
 
 number_of_SNPs = 5
 
@@ -53,6 +54,9 @@ def create_dataframe(genotypes,LDL_levels):
   df.index.name = 'Patient'
   return df
 
+def num_zeros(decimal):
+    return inf if decimal == 0 else -floor(log10(abs(decimal))) - 1
+
 def line_of_best_fit(x, y):
     '''
     Create a line of best fit for each
@@ -61,5 +65,5 @@ def line_of_best_fit(x, y):
     res = {"effect size (slope)":    np.round(res.slope,3),
            "intercept"  :    np.round(res.intercept,3),
            "p value"    :    res.pvalue,
-           "-log_10(p)" :  np.round(-np.log10(res.pvalue),3)}
+           "#0's after decimal in p value" :    num_zeros(res.pvalue)}
     return res
