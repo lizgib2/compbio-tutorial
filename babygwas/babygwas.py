@@ -58,8 +58,8 @@ def line_of_best_fit(x, y):
     Create a line of best fit for each
     '''
     res = linregress(x, y)
-    res = {"effect size (slope)":    res.slope,
-           "intercept"  :    res.intercept,
+    res = {"effect size (slope)":    np.round(res.slope,3),
+           "intercept"  :    np.round(res.intercept,3),
            "p value"    :    res.pvalue,
-           "-log_10(p)" :  -np.log10(res.pvalue)}
+           "-log_10(p)" :  np.round(-np.log10(res.pvalue))}
     return res
