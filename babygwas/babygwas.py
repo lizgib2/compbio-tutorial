@@ -61,5 +61,5 @@ def line_of_best_fit(x, y):
     res = {"effect size (slope)":    np.round(res.slope,3),
            "intercept"  :    np.round(res.intercept,3),
            "p value"    :    res.pvalue,
-           "-log_10(p)" :  np.round(-np.log10(res.pvalue))}
+           "-log_10(p)" :  np.round(-np.log10(res.pvalue),3)}
     return res
