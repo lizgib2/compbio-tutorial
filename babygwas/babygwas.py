@@ -73,3 +73,6 @@ def gwas(genotypes, phenotypes):
         sumstats['pvalue'].append(gwas_res[2])
         i += 1
     return(sumstats)
+
+if __name__ is "__main__":
+    np.random.seed(time.time())
