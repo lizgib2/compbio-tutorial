@@ -62,7 +62,7 @@ def line_of_best_fit(genotypes, phenotypes):
     Create a line of best fit for each
     '''
     res = linear_regression(genotypes, phenotypes)
-    res = {"effect size":    res.slope
+    res = {"effect size (slope)":    res.slope
            "intercept"  :    res.intercept
            "p value"    :    res.pvalue}
     return res
