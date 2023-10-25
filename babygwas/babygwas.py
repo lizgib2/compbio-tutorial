@@ -49,19 +49,11 @@ def create_dataframe(genotypes,LDL_levels):
   df.index.name = 'Patient'
   return df
 
-def linear_regression(x,y):
-    '''
-    A simple linear regression of your genotype (x)
-    versus your trait status (y)
-    '''
-    res = linregress(x,y)
-    return res.slope,res.intercept,res.pvalue
-
 def line_of_best_fit(x, y):
     '''
     Create a line of best fit for each
     '''
-    res = linear_regression(x, y)
+    res = linregress(x, y)
     res = {"effect size (slope)":    res.slope,
            "intercept"  :    res.intercept,
            "p value"    :    res.pvalue}
