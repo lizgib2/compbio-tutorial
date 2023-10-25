@@ -57,24 +57,12 @@ def linear_regression(x,y):
     res = linregress(x,y)
     return res.slope,res.intercept,res.pvalue
 
-def gwas(genotypes, phenotypes):
+def line_of_best_fit(genotypes, phenotypes):
     '''
-    Conduct SNPwise regressions to get your GWAS values
+    Create a line of best fit for each
     '''
-    sumstats = dict()
-    sumstats['snp'] = []
-    sumstats['effect'] = []
-    sumstats['intercept'] = []
-    sumstats['pvalue'] = []
-    # transpose the genotypes matrix to be SNPs X individuals
-    genotypes_t = np.transpose(genotypes)
-    i = 0
-    # run GWAS per snp
-    for x in genotypes_t:
-        gwas_res = linear_regression(x, phenotypes)
-        sumstats['snp'].append(i)
-        sumstats['effect'].append(gwas_res[0])
-        sumstats['intercept'].append(gwas_res[1])
-        sumstats['pvalue'].append(gwas_res[2])
-        i += 1
-    return(sumstats)
+    res = linear_regression(genotypes, phenotypes)
+    res = {"effect size":    res.slope
+           "intercept"  :    res.intercept
+           "p value"    :    res.pvalue}
+    return res
