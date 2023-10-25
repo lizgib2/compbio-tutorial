@@ -56,5 +56,6 @@ def line_of_best_fit(x, y):
     res = linregress(x, y)
     res = {"effect size (slope)":    res.slope,
            "intercept"  :    res.intercept,
-           "p value"    :    res.pvalue}
+           "p value"    :    res.pvalue,
+           "-log_10(p)" :  -np.log10(res.pvalue)}
     return res
