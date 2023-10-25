@@ -27,7 +27,11 @@ def simulate_genotypes(number_of_people):
 def true_effect_sizes():
     return [0,-20,0,21,0]
 
-def simulate_LDL_levels(genotypes, standard_deviation=12):
+def simulate_LDL_levels(genotypes, standard_deviation=12,randomseed=None):
+    if randomseed is None:
+        np.random.seed(np.int64(time())
+    else:
+        np.random.seed(randomseed)
     #cast to an arary so that this works with list or array input
     genotypes = np.array(genotypes)
     # Simulate disease status for each individual
@@ -74,6 +78,3 @@ def gwas(genotypes, phenotypes):
         sumstats['pvalue'].append(gwas_res[2])
         i += 1
     return(sumstats)
-
-if __name__ is "__main__":
-    np.random.seed(np.int64(time()))
