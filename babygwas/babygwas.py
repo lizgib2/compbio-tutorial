@@ -30,7 +30,7 @@ def simulate_genotypes(number_of_people=1,randomseed=None):
     return genotypes
 
 def true_effect_sizes():
-    return [0,-2,0,2,0]
+    return [0,-2,0,3,0]
 
 def simulate_LDL_levels(genotypes, standard_deviation=12,randomseed=None):
     if randomseed is None:
