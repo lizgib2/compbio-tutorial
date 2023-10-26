@@ -32,7 +32,7 @@ def simulate_genotypes(number_of_people=1,randomseed=None):
 def true_effect_sizes():
     return [0,-2,0,3,0]
 
-def simulate_LDL_levels(genotypes, standard_deviation=12,randomseed=None):
+def simulate_LDL_levels(genotypes, standard_deviation=15,randomseed=None):
     if randomseed is None:
         np.random.seed(np.int64(time()))
     else:
