@@ -54,9 +54,6 @@ def create_dataframe(genotypes,LDL_levels):
   df.index.name = 'Patient'
   return df
 
-def num_zeros(decimal):
-    return inf if decimal == 0 else -floor(log10(abs(decimal))) - 1
-
 def line_of_best_fit(x, y):
     '''
     Create a line of best fit for each
@@ -64,6 +61,6 @@ def line_of_best_fit(x, y):
     res = linregress(x, y)
     res = {"effect size (slope)":    np.round(res.slope,3),
            "intercept"  :    np.round(res.intercept,3),
-           "p value"    :    res.pvalue,
-           "#0's after decimal in p value" :    num_zeros(res.pvalue)}
+           "p-value"    :    res.pvalue,
+           "p-value in scientific notation" :  '{:.2E}'.format(res.pvalue)}
     return res
