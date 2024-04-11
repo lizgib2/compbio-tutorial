@@ -50,12 +50,12 @@ def simulate_trait_levels(genotypes, standard_deviation=1200,randomseed=None):
     genetic_component = np.dot(genotypes, m)
     environmental_component = np.random.normal(0, standard_deviation, number_of_people)
     trait_levels = environmental_component + genetic_component + 3000
-    return np.round(trait_levels,1)
+    return np.round(trait_levels,0)
 
 def create_dataframe(genotypes,trait_levels):
   columns = [f"SNP {i+1}" for i in range(number_of_SNPs)]
   df = pd.DataFrame(genotypes,columns=columns)
-  df["# Abnormal B lymphocytes/uL"] = trait_levels
+  df["Abnormal B lymphocytes/uL"] = trait_levels
   df.index.name = 'Patient'
   return df
 
@@ -70,12 +70,12 @@ def line_of_best_fit(x, y):
            "p-value in scientific notation" :  '{:.2E}'.format(res.pvalue)}
     return res
 
-# def main():
-#     number_of_people = 900
-#     genotypes = simulate_genotypes(number_of_people)
-#     trait_levels = simulate_trait_levels(genotypes)
-#     print(trait_levels)
-#     df = create_dataframe(genotypes,trait_levels)
-#     print(df)
+def main():
+    number_of_people = 900
+    genotypes = simulate_genotypes(number_of_people)
+    trait_levels = simulate_trait_levels(genotypes)
+    print(trait_levels)
+    df = create_dataframe(genotypes,trait_levels)
+    print(df)
 
-# main()
+main()
