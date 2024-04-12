@@ -34,8 +34,7 @@ def true_effect_sizes():
 
 def simulate_trait_levels(genotypes, standard_deviation=1200,randomseed=None):
     '''
-    The trait of interest for our GWAS workshop is # of abnormal B lymphocytes
-    per the diagnostic criteria for a cancer called Chronic Lympohcytic Leukemia
+    The trait of interest for our GWAS workshop is # of cancer cells. 
     '''
 
     if randomseed is None:
@@ -55,7 +54,7 @@ def simulate_trait_levels(genotypes, standard_deviation=1200,randomseed=None):
 def create_dataframe(genotypes,trait_levels):
   columns = [f"SNP {i+1}" for i in range(number_of_SNPs)]
   df = pd.DataFrame(genotypes,columns=columns)
-  df["Abnormal B lymphocytes/uL"] = trait_levels
+  df["Cancer cells/uL"] = trait_levels
   df.index.name = 'Patient'
   return df
 
