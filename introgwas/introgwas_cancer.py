@@ -49,7 +49,7 @@ def simulate_trait_levels(genotypes, standard_deviation=1200,randomseed=None):
     genetic_component = np.dot(genotypes, m)
     environmental_component = np.random.normal(0, standard_deviation, number_of_people)
     trait_levels = environmental_component + genetic_component + 3000
-    return np.round(trait_levels,0)
+    return abs(np.round(trait_levels,0))
 
 def create_dataframe(genotypes,trait_levels):
   columns = [f"SNP {i+1}" for i in range(number_of_SNPs)]
