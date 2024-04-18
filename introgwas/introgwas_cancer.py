@@ -32,7 +32,7 @@ def simulate_genotypes(number_of_people=1,randomseed=None):
 def true_effect_sizes():
     return [0,-2,0,3,0]
 
-def simulate_trait_levels(genotypes, standard_deviation=5,randomseed=None):
+def simulate_trait_levels(genotypes, standard_deviation=10,randomseed=None):
     '''
     The trait of interest for our GWAS workshop is # of cancer cells. 
     '''
