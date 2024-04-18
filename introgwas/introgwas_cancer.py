@@ -32,7 +32,7 @@ def simulate_genotypes(number_of_people=1,randomseed=None):
 def true_effect_sizes():
     return [0,-2,0,3,0]
 
-def simulate_trait_levels(genotypes, standard_deviation=10,randomseed=None):
+def simulate_trait_levels(genotypes, standard_deviation=5,randomseed=None):
     '''
     The trait of interest for our GWAS workshop is # of cancer cells. 
     '''
@@ -47,8 +47,8 @@ def simulate_trait_levels(genotypes, standard_deviation=10,randomseed=None):
     m = true_effect_sizes()
     number_of_people, number_of_SNPs = genotypes.shape
     genetic_component = np.dot(genotypes, m)
-    environmental_component = np.random.normal(0, standard_deviation, number_of_people)
-    trait_levels = environmental_component + genetic_component + 3000
+    environmental_component = np.random.normal(3000, standard_deviation, number_of_people)
+    trait_levels = environmental_component + genetic_component
     return abs(np.round(trait_levels,0))
 
 def create_dataframe(genotypes,trait_levels):
